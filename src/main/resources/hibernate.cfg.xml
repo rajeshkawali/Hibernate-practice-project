@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernatedb</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="connection.pool_size">10</property>
+
+		<!-- mysql dialect -->
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		
+		<!-- Disable the second-level cache -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<!-- 
+		<property name="cache.use_second_level_cache">true</property>   
+         <property name="cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property> 
+		 -->
+		
+		<!-- Enable Hibernate's automatic session context management -->
+		<property name="current_session_context_class">thread</property> 
+
+		<!-- Print all executed SQL to stdout(console) -->
+		<property name="show_sql">true</property>
+
+		<!-- update existing database(Drop and re-create the database schema on startup, if used as create)-->
+		<property name="hbm2ddl.auto">create</property>
+
+		<!-- Names the annotated entity classes here -->
+
+		<mapping class="com.rajeshkawali.embedded.Employee" />
+		<mapping class="com.rajeshkawali.embedded.Address" />
+		 <!-- 
+		<mapping class="com.rajeshkawali.basics.UserDetails" />
+		<mapping class="com.rajeshkawali.basics.Vehicle" />
+		-->
+		
+		<mapping class="com.rajeshkawali.onetoone.UserDetailsOTO" />
+		<mapping class="com.rajeshkawali.onetoone.VehicleOTO" /> 
+		
+
+		<mapping class="com.rajeshkawali.onetomany.UserDetailsOTM" />
+		<mapping class="com.rajeshkawali.onetomany.VehicleOTM" /> 
+
+		
+		<!-- 
+		<mapping class="com.rajeshkawali.manytoone.UserDetailsMTO" />
+		<mapping class="com.rajeshkawali.manytoone.VehicleMTO" /> 
+		-->
+
+	</session-factory>
+</hibernate-configuration>
+
