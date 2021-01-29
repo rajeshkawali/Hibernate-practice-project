@@ -11,6 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
+
 @Entity
 public class UserDetailsMTO {
 
@@ -25,6 +28,7 @@ public class UserDetailsMTO {
 	
 	@ManyToOne(fetch=FetchType.LAZY, targetEntity=VehicleMTO.class, cascade=CascadeType.ALL)
 	@JoinColumn(name = "vehicleID", referencedColumnName = "vehicle_id", nullable = false, insertable = true, updatable = true)
+	//@NotFound(action = NotFoundAction.IGNORE) // If this object is not found just ignore/throw exception it
 	private VehicleMTO vehicle;
 	
 	

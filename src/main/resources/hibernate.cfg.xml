@@ -46,10 +46,10 @@
 		
 		<mapping class="com.rajeshkawali.onetomany.UserDetailsOTM" />
 		<mapping class="com.rajeshkawali.onetomany.VehicleOTM" /> 
-		
+		 -->
 		<mapping class="com.rajeshkawali.manytoone.UserDetailsMTO" />
 		<mapping class="com.rajeshkawali.manytoone.VehicleMTO" /> 
-		-->
+		 <!--
 		<mapping class="com.rajeshkawali.inheritance.singletable.Employee" />
 		<mapping class="com.rajeshkawali.inheritance.singletable.ContractEmployee" /> 
 		<mapping class="com.rajeshkawali.inheritance.singletable.PermanentEmployee" /> 
@@ -65,7 +65,7 @@
 		<mapping class="com.rajeshkawali.inheritance.mappedsuperclass.Employee" />
 		<mapping class="com.rajeshkawali.inheritance.mappedsuperclass.ContractEmployee" /> 
 		<mapping class="com.rajeshkawali.inheritance.mappedsuperclass.PermanentEmployee" />
-
+-->
 	</session-factory>
 </hibernate-configuration>
 

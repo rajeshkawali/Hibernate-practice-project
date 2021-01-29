@@ -9,7 +9,7 @@ public class MainClassUserMTO {
 	public static void main(String[] args) {
 		
 		UserDetailsMTO user=new UserDetailsMTO();
-		user.setUser_name("Nivedita");
+		user.setUser_name("Vidya");
 		
 		UserDetailsMTO user1=new UserDetailsMTO();
 		user1.setUser_name("Rajesh");
@@ -19,6 +19,9 @@ public class MainClassUserMTO {
 		
 		UserDetailsMTO user3=new UserDetailsMTO();
 		user3.setUser_name("Mahesh");
+		
+		UserDetailsMTO user4=new UserDetailsMTO();
+		user4.setUser_name("Keshav");
 		
 		VehicleMTO vehicle = new VehicleMTO();
 		vehicle.setVehicle_name("Bugati");
@@ -36,6 +39,7 @@ public class MainClassUserMTO {
 		user1.setVehicle(vehicle1);
 		user2.setVehicle(vehicle2);
 		user3.setVehicle(vehicle3);
+		user4.setVehicle(vehicle3);
 		
 		
 		Session session = HibernateConfiguration.getSessionFactory().getCurrentSession();
@@ -44,6 +48,7 @@ public class MainClassUserMTO {
 		session.save(user1);
 		session.save(user2);
 		session.save(user3);
+		session.save(user4);
 		session.getTransaction().commit();
 
 

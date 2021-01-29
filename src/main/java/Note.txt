@@ -1,0 +1,25 @@
+<---------------Inheritance ----------------->
+
+Single_Table --> Puts everthing into single table
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn in parent class and @DiscriminatorValue annotations for mapping table per hierarchy strategy
+----------------------------------------------------------------------------------------------------
+Table_Per_Class --> It will create separate tables for each entity classes and 
+				    duplicates parent properties to its child tables.
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) annotation in the parent class
+----------------------------------------------------------------------------------------------------
+Joined --> It will create separate tables for each entity classes and 
+		   it will not duplicates parent properties into the child table instead it will add parent Id into the child table.
+@Inheritance(strategy=InheritanceType.JOINED) in the parent class and 
+@PrimaryKeyJoinColumn annotation in the subclasses.
+----------------------------------------------------------------------------------------------------
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+		    

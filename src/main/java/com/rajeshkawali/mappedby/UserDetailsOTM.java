@@ -20,7 +20,8 @@ public class UserDetailsOTM {
 	@Column(name="user_name")
 	private String user_name;
 	
-	@OneToMany(mappedBy = "user") // It will not create new table for mapping of two tables id's, insted 
+	// mappedBy - It will not create new table for mapping of two tables id's, instead it will store user_id in Vehicle table. 
+	@OneToMany(mappedBy = "user") 
 	private Collection<VehicleOTM> vehicle= new ArrayList<VehicleOTM>();
 	
 	public int getUser_id() {
