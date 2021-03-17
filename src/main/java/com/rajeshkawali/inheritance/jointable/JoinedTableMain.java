@@ -5,7 +5,8 @@ import java.time.LocalDate;
 import org.hibernate.Session;
 
 import com.rajeshkawali.HibernateConfiguration;
-// This is the most logical solution, as it mirrors the object structure in the database. In this approach, a separate database table is defined for each of the class in the hierarchy 
+// This is the most logical solution, as it mirrors the object structure in the database. 
+// In this approach, a separate database table is defined for each of the class in the hierarchy 
 // and each table stores only its local attributes. Along with attribute, each table should have an id column and the id is defined in the parent table.
 // Each of the entity classes is associated with a database table. Additionally, the parent class’s mapped table contains a discriminatory column. In our demo, 
 // join_table_employee contains the employee_type discriminatory column.
