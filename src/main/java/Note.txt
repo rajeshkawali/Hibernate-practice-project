@@ -1,5 +1,5 @@
 <---------------Hibernate Inheritance ----------------->
-Hibernate Table Per Hierarchy using Annotation:-->
+Table Per Hierarchy using Annotation:-->(SINGLE_TABLE)
 Table Per Hierarchy (Single_Table --> Puts everthing into single table)
 You need to use @Inheritance(strategy=InheritanceType.SINGLE_TABLE), 
 @DiscriminatorColumn and @DiscriminatorValue annotations for mapping table per hierarchy strategy.
@@ -7,14 +7,14 @@ You need to use @Inheritance(strategy=InheritanceType.SINGLE_TABLE),
 In case of table per hierarchy, only one table is required to map the inheritance hierarchy. 
 Here, an extra column (also known as discriminator column) is created in the table to identify the class.
 ----------------------------------------------------------------------------------------------------
-Table Per Concrete class using Annotation:-->
+Table Per Concrete class using Annotation:-->(TABLE_PER_CLASS)
 Table_Per_Class --> It will create separate tables for each entity classes and 
 				    duplicates parent properties to its child tables.
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) annotation in the parent class
 So there are no nullable values in the table. 
 Disadvantage of this approach is that duplicate columns are created in the subclass tables.
 ----------------------------------------------------------------------------------------------------
-Table Per Subclass using Annotation:-->
+Table Per Subclass using Annotation:-->(JOINED)
 
 Joined --> It will create separate tables for each entity classes and 
 		   it will not duplicates parent properties into the child table instead it will add parent Id into the child table.

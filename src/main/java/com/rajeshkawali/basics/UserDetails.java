@@ -15,6 +15,7 @@ import javax.persistence.Transient;
 
 @Entity
 @Table(name="User_Details")
+//@Immutable    // To make class as Immutable. By default it is mutable
 public class UserDetails {
 
 	@Id

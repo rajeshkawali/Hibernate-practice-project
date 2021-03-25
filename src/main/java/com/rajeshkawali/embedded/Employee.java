@@ -39,6 +39,7 @@ public class Employee {
 	@Column(name="Emp_Joining")
 	private String empJoining;
 	
+	//@EmbeddedId  //This is used to instruct Hibernate that the Employee entity has a composite key of an Address entity.
 	@Embedded
 	@AttributeOverrides({
 		@AttributeOverride(name ="houseNo",column=@Column(name="Home_House_No")),
