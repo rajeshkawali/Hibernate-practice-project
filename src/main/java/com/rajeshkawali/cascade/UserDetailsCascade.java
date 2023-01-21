@@ -25,6 +25,13 @@ public class UserDetailsCascade {
 	@Column(name="user_name")
 	private String user_name;
 	
+	/**
+	In Hibernate, CascadeType.ALL is a cascade option that can be used to specify how 
+	operations on an entity should be cascaded to its associated entities. 
+	When the cascade attribute of an entity mapping is set to CascadeType.ALL, 
+	it means that all operations (persist, update, delete, refresh, merge, etc.) 
+	performed on the parent entity will be cascaded to its associated child entities.
+	*/
 	@OneToMany(fetch=FetchType.LAZY, targetEntity=VehicleCascade.class, cascade=CascadeType.ALL)
 	@JoinTable(name="UserID_VehicleID",joinColumns=@JoinColumn(name="u_id"),inverseJoinColumns=@JoinColumn(name="v_id"))
 	private Collection<VehicleCascade> vehicle= new ArrayList<VehicleCascade>();

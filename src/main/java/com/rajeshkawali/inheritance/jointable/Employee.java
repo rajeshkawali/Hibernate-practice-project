@@ -10,7 +10,17 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
+/*
+In Hibernate, the @Inheritance annotation is used to specify the inheritance strategy for an entity class hierarchy. 
+The strategy attribute of the @Inheritance annotation is used to specify the type of inheritance strategy.
 
+When the strategy attribute is set to InheritanceType.JOINED, 
+it means that the inheritance strategy used is the "joined" strategy. 
+This strategy maps the class hierarchy to multiple tables, one for each class in the hierarchy, 
+and each table has a primary key column that is shared by all the tables in the hierarchy. 
+Each table also has columns for the properties defined in its corresponding class, 
+as well as a foreign key column that references the primary key of the table of the superclass.
+*/
 @Entity(name = "joinedTableEmployee")
 @Table(name = "JOIN_TABLE_EMPLOYEE")
 @Inheritance(strategy = InheritanceType.JOINED)

@@ -13,7 +13,22 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
+/*
+In Hibernate, the "FetchType" enum is used to specify the fetching strategy for a relationship between entities. 
+There are two values in the FetchType enum: LAZY and EAGER.
 
+FetchType.LAZY: When a relationship is marked as LAZY, 
+it means that the associated entities will not be automatically loaded when the parent entity is loaded. 
+Instead, the associated entities will be loaded only when they are explicitly accessed by the application. 
+This is useful when an entity has a lot of associated entities that are 
+not needed in most cases, as it can improve performance by loading only the data that is actually needed.
+
+FetchType.EAGER: When a relationship is marked as EAGER, it means that the associated entities will be 
+automatically loaded when the parent entity is loaded. This means that the associated entities will 
+always be available, even if they are not explicitly accessed by the application. 
+This can be useful when an entity has a small number of associated entities that are always needed, 
+but it can also lead to poor performance if the associated entities are large or if there are many of them.
+*/
 @Entity
 public class UserDetailsOTM {
 

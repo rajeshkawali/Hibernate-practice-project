@@ -7,7 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+/*
+In Hibernate, the @Inheritance annotation is used to specify the inheritance strategy for an entity class hierarchy. 
+The strategy attribute of the @Inheritance annotation is used to specify the type of inheritance strategy.
 
+When the strategy attribute is set to InheritanceType.TABLE_PER_CLASS, 
+it means that the inheritance strategy used is the "table-per-class" strategy. 
+This strategy maps each class in the hierarchy to its own separate table, 
+and each table has a primary key column and columns for the properties defined in its corresponding class.
+*/
 @Entity(name = "tablePerClassEmployee")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Employee {

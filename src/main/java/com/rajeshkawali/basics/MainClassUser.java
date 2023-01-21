@@ -23,7 +23,6 @@ public class MainClassUser {
 		session.save(user);
 		session.save(vehicle);
 		session.getTransaction().commit();
-
+		session.close();
 	}
-
 }

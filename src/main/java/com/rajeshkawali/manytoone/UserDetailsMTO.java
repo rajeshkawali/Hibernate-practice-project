@@ -11,8 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
+//import org.hibernate.annotations.NotFound;
+//import org.hibernate.annotations.NotFoundAction;
 
 @Entity
 public class UserDetailsMTO {

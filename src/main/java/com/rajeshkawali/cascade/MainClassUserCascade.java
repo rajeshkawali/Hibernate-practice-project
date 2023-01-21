@@ -7,7 +7,8 @@ import com.rajeshkawali.HibernateConfiguration;
 public class MainClassUserCascade {
 
 	public static void main(String[] args) {
-		// cascade=CascadeType.ALL --> When we saving user and Vehicle just we are saving only user object not Vehicle, If we want to save vehicle details with user object then use Cascade.
+		// cascade=CascadeType.ALL --> When we saving user and Vehicle just we are saving only user object not Vehicle, 
+		// If we want to save vehicle details with user object then use Cascade.
 		// Which will save with user object.
 		UserDetailsCascade user=new UserDetailsCascade();
 		user.setUser_name("Kiran");

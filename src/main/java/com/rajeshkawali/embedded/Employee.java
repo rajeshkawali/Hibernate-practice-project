@@ -17,9 +17,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.CollectionId;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Type;
+//import org.hibernate.annotations.CollectionId;
+//import org.hibernate.annotations.GenericGenerator;
+//import org.hibernate.annotations.Type;
 
 @Entity
 @Table(name="Employee")
